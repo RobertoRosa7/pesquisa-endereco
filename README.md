@@ -1,2 +1,2 @@
-# Pesquisa endereco
+# Pesquisa endereço
 Procure seu endereço pelo CEP
