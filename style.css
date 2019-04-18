@@ -1,0 +1,145 @@
+body{
+	margin: 0;
+	background: #e84118;
+	padding:0;
+}
+#app{
+	position:relative;
+	height:100vh;
+	width:100%;
+}
+.search-box{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	background: #2f3640;
+	border-radius:40px;
+	padding:10px;
+	width:50%;
+}
+.search-box small{
+	position:absolute;
+	bottom:-25px;
+	left:5px;
+	color:#eee;
+	letter-spacing: 1px;
+}
+.search-btn{
+	text-decoration: none;
+	color: #e84118;
+	float: right;
+	width: 40px;
+	height:40px;
+	border-radius: 50%;
+	background: #2f3640;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s;
+	cursor:pointer;
+}
+.search-text{
+	background:none;
+	border:none;
+	outline:none;
+	float:left;
+	padding:0;
+	color:white;
+	font-size:16px;
+	transition: .6s;
+	width:50%;
+	line-height:40px;
+	cursor:pointer;
+}
+.search-box:hover{
+	background: #0f1927;
+}
+.search-box:hover > .search-btn{
+	background:white;
+}
+.info{
+	width: 100%;
+	margin-top: 20px;
+	position: relative;
+	display: none;
+}
+.info-tooltips{
+	background: #aaa;
+	width: 60%;
+	border-radius: 4px;
+	background:#fff;
+	margin: 0 auto;
+	padding:20px;
+}
+.info-tooltips:before{
+	content: '';
+	width:40px;
+	height:40px;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	background: #fff;
+}
+.search-box:hover ~ .info {
+	display: flex;
+}
+.notification{
+	position:absolute;
+	bottom:20px;
+	left:20px;
+	color: white;
+	background: #0f192794;
+	width: 25%;
+	padding: 10px 20px;
+	border-radius: 20px;
+}
+.form-search-enter, .form-search-leave-to{
+	opacity: 0;
+}
+.form-search-enter-active, .form-search-leave-active{
+	transition: opacity .5s;
+}
+.search-result-enter, .search-result-leave-to{
+	opacity: 0;
+}
+.search-result-enter-active, .search-result-leave-active{
+	transition: opacity .5s;
+}
+.content-search{
+	background: #fff;
+	padding: 20px;
+	border-radius: 10px;
+}
+@media screen and (max-width:768.98px){
+	.search-box{
+		width:80%;
+	}
+	.info-tooltips{
+		width:90%;
+	}
+	.display-3{
+		font-size: 3.5em;
+	}
+	.notification{
+		width: 40%;
+	}
+	.search-box:hover ~ .info {
+		display: none;
+	}
+}
+@media screen and (max-width: 549.98px){
+	.notification{
+		width:90%;
+	}
+	.search-box:hover ~ .info {
+		display: none;
+	}
+	.display-3{
+		font-size: 2.5em;
+	}
+	.content-search h1{
+		font-size: 20px;
+	}
+}
